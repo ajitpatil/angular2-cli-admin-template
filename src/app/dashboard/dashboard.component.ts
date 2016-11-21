@@ -1,15 +1,16 @@
 import { Component, OnInit}    from '@angular/core';
 import { Router }               from '@angular/router';
 import {ChartDataService} from '../services/chart-data.service'
-
+import { Observable } from 'rxjs/Observable';
 @Component({
     templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
     isDataAvailable : boolean = false;
     constructor( private router: Router, private chartDataService: ChartDataService ) {
-        this.getChartData();
-
+        //this.getChartData();
+        this.isDataAvailable=true;
+        console.log("loading..");
     }
 
     chartData : number[];

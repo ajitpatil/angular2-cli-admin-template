@@ -1,6 +1,7 @@
 import { NgModule }                     from '@angular/core';
 import { BrowserModule }                from '@angular/platform-browser';
 import { HttpModule }                   from '@angular/http';
+import {FormsModule}                    from "@angular/forms";
 import { AppComponent }                 from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
@@ -45,6 +46,8 @@ import { RegisterComponent }            from './pages/register.component';
 import { Ng2DatetimePickerModule }      from 'ng2-datetime-picker';
 import {InMemoryDataService}            from './services/in-memory-data-service';
 import { ChartDataService} from './services/chart-data.service';
+import { CommentService} from './services/comment.service';
+import {CommentListComponent} from './comments/comments-list.component';
 
 import './rxjs-extensions';
 
@@ -58,7 +61,7 @@ import './rxjs-extensions';
     ChartsModule,
     Ng2DatetimePickerModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    FormsModule
   ],
   declarations: [
     AppComponent,
@@ -82,9 +85,10 @@ import './rxjs-extensions';
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
-    AsideToggleDirective
+    AsideToggleDirective,
+    CommentListComponent
   ],
-  providers: [ChartDataService],
+  providers: [ChartDataService, CommentService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

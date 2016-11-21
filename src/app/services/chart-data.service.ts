@@ -5,12 +5,12 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ChartDataService{
-  private heroesUrl = 'app/chartdata';
+  private chartDataUrl = 'app/chartdata';
   private headers = new Headers({'Content-Type':'application/json'});
   constructor (private http:Http){}
 
   getChartData(): Promise<number[]>{
-    return this.http.get(this.heroesUrl)
+    return this.http.get(this.chartDataUrl)
                 .toPromise()
                 .then(response=> response.json().data as number[])
                 .catch(this.handleError);
