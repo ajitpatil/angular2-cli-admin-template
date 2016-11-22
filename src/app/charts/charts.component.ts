@@ -9,7 +9,7 @@ export class ChartsComponent implements OnInit {
     constructor() { }
 
     ngOnInit(){
-      this.selectedTimeframe = this.timeframes[0];
+      this.selectedTimeframe = this.timeframes[3];
     }
 
     public timeframes : Timeframe[] = [{name:'Last 2 hours',value:'-2h'},{name:'Last 4 hours',value:'-4h'},
