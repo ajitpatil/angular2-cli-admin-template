@@ -9,7 +9,7 @@ export class ChartsComponent implements OnInit {
     constructor() { }
 
     ngOnInit(){
-      this.selectedTimeframe = 'midnight';
+      this.selectedTimeframe = this.timeframes[0];
     }
 
     public timeframes : Timeframe[] = [{name:'Last 2 hours',value:'-2h'},{name:'Last 4 hours',value:'-4h'},
@@ -18,10 +18,11 @@ export class ChartsComponent implements OnInit {
                                         {name:'Last 1 Week',value:'-1w'},{name:'Last 2 weeks',value:'-2w'}
                                       ];
 
-    selectedTimeframe: string;
+    selectedTimeframe: Timeframe;
 
-    onSubmit () : void{
-      console.log('Form Submitted!');
+    timeChange (t:any):void{
+      console.log("inside : " + t);
+      this.selectedTimeframe = t;
     }
 
     // events

@@ -3,8 +3,8 @@
     <div class="form-group col-sm-4">
       <form #timeForm="ngForm">
         <label for="ccyear">Timeframe</label>
-        <select name="timeframe" [(ngModel)]="selectedTimeframe">
-          <option *ngFor="let timeframe of timeframes" [value]="timeframe.value">
+        <select name="timeframe"[(ngModel)]="selectedTimeframe" (ngModelChange)="timeChange($event)">
+          <option *ngFor="let timeframe of timeframes" [ngValue]="timeframe">
           {{timeframe.name}}
           </option>
         </select>
@@ -31,7 +31,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=wytwtpfoo.data&vqstart=midnight'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=wytwtpfoo.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=wytwtpfoo.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=wytwtpfoo.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart=midnight'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
 
                 </div>
             </div>
@@ -68,7 +68,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=tuj5vfuk-.data&vqstart=midnight'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=tuj5vfuk-.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=tuj5vfuk-.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=tuj5vfuk-.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
 
                 </div>
             </div>
@@ -87,7 +87,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart=midnight'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.slc.ebay.com/mg.cgi?datafile=t-n-k1oa1a.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
 
                 </div>
             </div>
@@ -114,7 +114,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -132,7 +132,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -195,7 +195,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ym4nkzyo4xl.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ym4nkzyo4xl.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ym4nkzyo4xl.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ym4nkzyo4xl.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -213,7 +213,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=cdkj-aa9rs8.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -231,7 +231,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=q5ub-l18z.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=ld-5i6fmes.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -276,7 +276,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=gyh2p3rgm.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=gyh2p3rgm.data&vqstart=midnight&graphonly=1'/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=gyh2p3rgm.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=gyh2p3rgm.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -294,7 +294,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                  <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=n84x7idtx.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=n84x7idtx.data&vqstart=midnight&graphonly=1'/></a>
+                  <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=n84x7idtx.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=n84x7idtx.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -312,7 +312,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=aobaf28ta.data&vqstart=midnight'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=aobaf28ta.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=aobaf28ta.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='http://mg.vip.ebay.com/mg.cgi?datafile=aobaf28ta.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -330,7 +330,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                     <a target='blank' href='https://mg.vip.slc.ebay.com/mg.cgi?datafile=2mau-3xkk.data&vqstart=midnight'><img width='100%' src='https://mg.vip.slc.ebay.com/mg.cgi?datafile=2mau-3xkk.data&vqstart=midnight&graphonly=1'/></a>
+                     <a target='blank' href='https://mg.vip.slc.ebay.com/mg.cgi?datafile=2mau-3xkk.data&vqstart={{selectedTimeframe.value}}'><img width='100%' src='https://mg.vip.slc.ebay.com/mg.cgi?datafile=2mau-3xkk.data&vqstart={{selectedTimeframe.value}}&graphonly=1'/></a>
                 </div>
             </div>
         </div>
@@ -410,7 +410,7 @@
             </div>
             <div class="card-block">
                 <div class="chart-wrapper">
-                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart=midnight'><img width="100%" src="http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart=midnight&graphonly=1"/></a>
+                    <a target='blank' href='http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart={{selectedTimeframe.value}}'><img width="100%" src="http://mg.vip.ebay.com/mg.cgi?datafile=85uk9ezz6s.data&vqstart={{selectedTimeframe.value}}&graphonly=1"/></a>
                 </div>
             </div>
         </div>
