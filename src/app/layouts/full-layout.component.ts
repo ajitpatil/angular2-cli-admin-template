@@ -7,7 +7,9 @@ import { Router }                       from '@angular/router';
 })
 export class FullLayoutComponent implements OnInit {
 
-    constructor( private router: Router ) { }
+    constructor( private router: Router ) {
+      this.status.isopen = false;
+    }
 
     public disabled:boolean = false;
     public status:{isopen:boolean} = {isopen: false};

@@ -6,7 +6,7 @@ import { AppComponent }                 from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
 
-import { ChartsModule }                 from 'ng2-charts/ng2-charts';
+
 import { SIDEBAR_TOGGLE_DIRECTIVES }    from './shared/sidebar.directive';
 import { AsideToggleDirective }         from './shared/aside.directive';
 import { BreadcrumbsComponent }         from './shared/breadcrumb.component';
@@ -32,9 +32,6 @@ import { TablesComponent }              from './components/tables.component';
 import { FontAwesomeComponent }         from './icons/font-awesome.component';
 import { SimpleLineIconsComponent }     from './icons/simple-line-icons.component';
 
-//Widgets
-import { WidgetsComponent }             from './widgets/widgets.component';
-
 //Charts
 import { ChartsComponent }              from './charts/charts.component';
 
@@ -43,11 +40,10 @@ import { p404Component }                from './pages/404.component';
 import { p500Component }                from './pages/500.component';
 import { LoginComponent }               from './pages/login.component';
 import { RegisterComponent }            from './pages/register.component';
-import { Ng2DatetimePickerModule }      from 'ng2-datetime-picker';
 import {InMemoryDataService}            from './services/in-memory-data-service';
 import { ChartDataService} from './services/chart-data.service';
-import { CommentService} from './services/comment.service';
-import {CommentListComponent} from './comments/comments-list.component';
+
+
 
 import './rxjs-extensions';
 
@@ -58,8 +54,6 @@ import './rxjs-extensions';
     BrowserModule,
     routing,
     Ng2BootstrapModule,
-    ChartsModule,
-    Ng2DatetimePickerModule,
     HttpModule,
     FormsModule
   ],
@@ -76,7 +70,6 @@ import './rxjs-extensions';
     TablesComponent,
     FontAwesomeComponent,
     SimpleLineIconsComponent,
-    WidgetsComponent,
     ChartsComponent,
     p404Component,
     p500Component,
@@ -85,10 +78,9 @@ import './rxjs-extensions';
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
-    AsideToggleDirective,
-    CommentListComponent
+    AsideToggleDirective
   ],
-  providers: [ChartDataService, CommentService],
+  providers: [ChartDataService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -19,8 +19,7 @@ import { TablesComponent }              from './components/tables.component';
 import { FontAwesomeComponent }         from './icons/font-awesome.component';
 import { SimpleLineIconsComponent }     from './icons/simple-line-icons.component';
 
-//Widgets
-import { WidgetsComponent }             from './widgets/widgets.component';
+
 
 //Charts
 import { ChartsComponent }              from './charts/charts.component';
@@ -133,13 +132,6 @@ const appRoutes: Routes = [
                         }
                     }
                 ]
-            },
-            {
-                path: 'widgets',
-                component: WidgetsComponent,
-                data: {
-                    title: 'Widgets'
-                }
             },
             {
                 path: 'charts',
