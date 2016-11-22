@@ -21,27 +21,20 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 col-lg-3">
-            <div class="card">
-                <div class="card-header card-header-inverse card-header-primary">
-                    <div class="font-weight-bold">
-                        <span>Checkout</span>
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-header">
+                <strong>Checkout</strong>
 
-                    </div>
+            </div>
+            <div class="card-block">
+                <button type="button" class="btn btn-primary btn-lg btn-block" routerLinkActive="active" [routerLink]="['/charts']">Prox Checkout</button>
+                <button type="button" class="btn btn-warning btn-lg btn-block">Express Checkout</button>
+                <button type="button" class="btn btn-danger btn-lg btn-block">Mobile Checkout</button>
 
-                    <div class="chart-wrapper">
-                      <comment-list></comment-list>
-                      <!--
-                      <base-chart class="chart" [datasets]="lineChart4Data" [labels]="lineChart4Labels" [options]="lineChart4Options" [colors]="lineChart4Colours" [legend]="lineChart4Legend" [chartType]="lineChart4Type" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"
-                      style="height:38px;"></base-chart>
-                    -->
-
-                    </div>
-
-                </div>
             </div>
         </div>
-
+      </div>
     </div>
     <div class="card">
       <div class="card-header">
