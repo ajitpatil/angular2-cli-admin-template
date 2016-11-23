@@ -2,6 +2,7 @@ import { NgModule }                     from '@angular/core';
 import { BrowserModule }                from '@angular/platform-browser';
 import { HttpModule }                   from '@angular/http';
 import {FormsModule}                    from "@angular/forms";
+import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import { AppComponent }                 from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
@@ -80,7 +81,7 @@ import './rxjs-extensions';
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective
   ],
-  providers: [ChartDataService],
+  providers: [ChartDataService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
