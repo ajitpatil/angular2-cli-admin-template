@@ -2,6 +2,7 @@ import { NgModule }                     from '@angular/core';
 import { BrowserModule }                from '@angular/platform-browser';
 import { HttpModule }                   from '@angular/http';
 import {FormsModule}                    from "@angular/forms";
+import {LocationStrategy,HashLocationStrategy} from '@angular/common';
 import { AppComponent }                 from './app.component';
 import { Ng2BootstrapModule }           from 'ng2-bootstrap/ng2-bootstrap';
 import { NAV_DROPDOWN_DIRECTIVES }      from './shared/nav-dropdown.directive';
@@ -49,6 +50,8 @@ import { ChartDataService} from './services/chart-data.service';
 import { CommentService} from './services/comment.service';
 import {CommentListComponent} from './comments/comments-list.component';
 
+import { Ng2TableModule } from 'ng2-table/ng2-table';
+
 import './rxjs-extensions';
 
 
@@ -61,7 +64,8 @@ import './rxjs-extensions';
     ChartsModule,
     Ng2DatetimePickerModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    Ng2TableModule
   ],
   declarations: [
     AppComponent,
@@ -86,9 +90,10 @@ import './rxjs-extensions';
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
-    CommentListComponent
+    CommentListComponent,
+
   ],
-  providers: [ChartDataService, CommentService],
+  providers: [ChartDataService, CommentService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
