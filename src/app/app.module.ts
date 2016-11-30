@@ -48,6 +48,7 @@ import {InMemoryDataService}            from './services/in-memory-data-service'
 import { ChartDataService} from './services/chart-data.service';
 import { CommentService} from './services/comment.service';
 import {CommentListComponent} from './comments/comments-list.component';
+import {PeopleService} from './services/people-service';
 
 import './rxjs-extensions';
 
@@ -88,7 +89,7 @@ import './rxjs-extensions';
     AsideToggleDirective,
     CommentListComponent
   ],
-  providers: [ChartDataService, CommentService],
+  providers: [ChartDataService, CommentService,PeopleService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
