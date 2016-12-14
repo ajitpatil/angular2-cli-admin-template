@@ -49,6 +49,8 @@ import { ChartDataService} from './services/chart-data.service';
 import { CommentService} from './services/comment.service';
 import {CommentListComponent} from './comments/comments-list.component';
 import {PeopleService} from './services/people-service';
+import {PoolDataService} from './services/pool-data-service';
+
 
 import './rxjs-extensions';
 
@@ -89,7 +91,7 @@ import './rxjs-extensions';
     AsideToggleDirective,
     CommentListComponent
   ],
-  providers: [ChartDataService, CommentService,PeopleService],
+  providers: [ChartDataService, CommentService,PeopleService,PoolDataService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
