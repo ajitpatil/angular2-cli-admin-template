@@ -13,11 +13,7 @@ export class TablesComponent implements OnInit {
   public rows:Array<any> = [];
   public columns:Array<any> = [
     {title: 'Name', name: 'name'},
-    {title: 'Position', name: 'position', sort: false},
-    {title: 'Office', name: 'office', sort: 'asc'},
-    {title: 'Extn.', name: 'ext', sort: ''},
-    {title: 'Start date', name: 'startDate'},
-    {title: 'Salary ($)', name: 'salary'}
+    {title: 'Endpoint', name: 'endpoint', sort: false}
   ];
   public page:number = 1;
   public itemsPerPage:number = 10;
@@ -28,7 +24,7 @@ export class TablesComponent implements OnInit {
   public config:any = {
     paging: true,
     sorting: {columns: this.columns},
-    filtering: {filterString: '', columnName: 'position'}
+
   };
 
   private data:Array<any> = TableData;
